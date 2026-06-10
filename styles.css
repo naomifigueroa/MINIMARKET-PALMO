@@ -1,0 +1,396 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+:root{
+--amarillo:#FFD000;
+--azul:#003DA5;
+--naranja:#FF6B00;
+--gris:#f5f5f5;
+--oscuro:#222;
+}
+
+body{
+background:white;
+color:var(--oscuro);
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+/* MENU */
+
+.navbar{
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,.1);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+height:70px;
+}
+
+.menu{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.menu a{
+text-decoration:none;
+color:var(--azul);
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--naranja);
+}
+
+/* PORTADA */
+
+.hero{
+position:relative;
+height:90vh;
+overflow:hidden;
+}
+
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-texto{
+position:absolute;
+top:50%;
+left:8%;
+transform:translateY(-50%);
+background:rgba(255,255,255,.9);
+padding:40px;
+border-radius:20px;
+max-width:550px;
+}
+
+.hero-texto h1{
+font-size:70px;
+color:var(--azul);
+}
+
+.hero-texto h2{
+color:var(--naranja);
+margin-bottom:15px;
+}
+
+.hero-texto p{
+margin-bottom:20px;
+line-height:1.6;
+}
+
+.btn{
+background:var(--naranja);
+padding:12px 25px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/* SECCIONES */
+
+.section{
+padding:80px 10%;
+}
+
+.contenedor{
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+text-align:center;
+font-size:40px;
+color:var(--azul);
+margin-bottom:30px;
+}
+
+.section p{
+font-size:18px;
+line-height:1.8;
+text-align:center;
+}
+
+.fondo-claro{
+background:#f7f7f7;
+}
+
+.fondo-amarillo{
+background:#fff5c7;
+}
+
+/* DOÑA PALMA */
+
+.contenedor-dona{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.dona-imagen img{
+width:350px;
+}
+
+.dona-texto{
+max-width:500px;
+}
+
+.dona-texto h2{
+color:var(--azul);
+margin-bottom:20px;
+}
+
+/* PRODUCTOS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.card h3{
+color:var(--azul);
+margin-bottom:10px;
+}
+
+/* GALERIA */
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.galeria img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+}
+
+.galeria img:hover{
+transform:scale(1.03);
+}
+
+/* FORMULARIO */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:700px;
+margin:auto;
+}
+
+input,
+select,
+textarea{
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+button{
+background:var(--azul);
+color:white;
+border:none;
+padding:15px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:var(--naranja);
+}
+
+/* IA */
+
+#resultadoIA{
+margin-top:20px;
+background:white;
+padding:20px;
+border-radius:10px;
+border-left:5px solid var(--naranja);
+}
+
+/* DASHBOARD */
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.kpi{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.kpi h3{
+color:var(--azul);
+}
+
+.kpi p{
+font-size:35px;
+font-weight:bold;
+color:var(--naranja);
+}
+
+/* FOOTER */
+
+footer{
+background:var(--azul);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.hero-texto{
+left:5%;
+right:5%;
+max-width:none;
+}
+
+.hero-texto h1{
+font-size:45px;
+}
+
+.section h2{
+font-size:30px;
+}
+
+.dona-imagen img{
+width:250px;
+}
+
+}
+/* CALENDARIO */
+
+.calendario-controles{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+margin-bottom:30px;
+}
+
+.calendario-controles h3{
+color:#003DA5;
+font-size:28px;
+}
+
+.calendario-grid{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+gap:10px;
+margin-top:20px;
+}
+
+.dia{
+background:white;
+border:1px solid #ddd;
+border-radius:10px;
+padding:15px;
+min-height:100px;
+cursor:pointer;
+transition:0.3s;
+font-weight:bold;
+}
+
+.dia:hover{
+background:#FFD000;
+transform:scale(1.03);
+}
+
+.dia-contenido{
+font-size:12px;
+margin-top:8px;
+color:#555;
+font-weight:normal;
+}
+/* HISTORIAL DE CAMPAÑAS */
+
+.tabla-historial{
+width:100%;
+border-collapse:collapse;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.tabla-historial th{
+background:#003DA5;
+color:white;
+padding:15px;
+}
+
+.tabla-historial td{
+padding:15px;
+border-bottom:1px solid #ddd;
+text-align:center;
+}
+
+.btn-eliminar{
+background:#FF6B00;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.btn-eliminar:hover{
+background:#c94f00;
+}
+.tabla-historial td{
+  max-width: 250px;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+
+.tabla-historial{
+  table-layout: fixed;
+}

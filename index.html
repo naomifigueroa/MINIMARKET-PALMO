@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PALMO | Donde cada sol rinde más</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo-container">
+<img src="logo-palmo.png" alt="PALMO" class="logo">
+</div>
+
+<ul class="menu">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#dona">Doña Palma</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#campanas">Campañas</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<!-- PORTADA -->
+
+<section id="inicio" class="hero">
+
+<img src="imagenes/portada.png" alt="PALMO">
+
+<div class="hero-texto">
+
+<h1>PALMO</h1>
+
+<h2>Donde cada sol rinde más</h2>
+
+<p>
+Tu tienda del barrio pensada para brindar ahorro,
+comodidad y una experiencia de compra cercana.
+</p>
+
+<a href="#nosotros" class="btn">Conócenos</a>
+
+</div>
+
+</section>
+
+<!-- QUIENES SOMOS -->
+
+<section id="nosotros" class="section">
+
+<div class="contenedor">
+
+<h2>¿Quiénes Somos?</h2>
+
+<p>
+
+PALMO es una tienda de barrio enfocada en ofrecer
+productos de calidad a precios accesibles.
+
+Nuestra propuesta de valor se basa en la cercanía
+con nuestros clientes, la comodidad de compra y
+la promesa de hacer rendir mejor cada sol de las familias.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- DOÑA PALMA -->
+
+<section id="dona" class="section fondo-amarillo">
+
+<div class="contenedor-dona">
+
+<div class="dona-imagen">
+
+<img src="imagenes/dona-palma.png" alt="Doña Palma">
+
+</div>
+
+<div class="dona-texto">
+
+<h2>Conoce a Doña Palma</h2>
+
+<p>
+
+Doña Palma representa la confianza,
+el ahorro y la cercanía que caracterizan
+a nuestro minimarket.
+
+Es la imagen que transmite el compromiso
+de PALMO con cada familia que nos visita.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTOS -->
+
+<section class="section">
+
+<div class="contenedor">
+
+<h2>Productos Destacados</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Abarrotes</h3>
+<p>Productos esenciales para el hogar.</p>
+</div>
+
+<div class="card">
+<h3>Bebidas</h3>
+<p>Variedad de bebidas frías y calientes.</p>
+</div>
+
+<div class="card">
+<h3>Limpieza</h3>
+<p>Artículos para el cuidado del hogar.</p>
+</div>
+
+<div class="card">
+<h3>Cuidado Personal</h3>
+<p>Productos para toda la familia.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria" class="section fondo-claro">
+
+<div class="contenedor">
+
+<h2>Galería PALMO</h2>
+
+<div class="galeria">
+
+<img src="imagenes/interior1.png">
+<img src="imagenes/interior2.png">
+<img src="imagenes/interior3.png">
+<img src="imagenes/cliente.png">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CAMPAÑAS -->
+
+<section id="campanas" class="section">
+
+<div class="contenedor">
+
+<h2>Gestión de Campañas</h2>
+
+<form id="formCampana">
+
+<input type="text" placeholder="Nombre de campaña">
+
+<select>
+<option>Facebook</option>
+<option>Instagram</option>
+<option>TikTok</option>
+<option>WhatsApp</option>
+</select>
+
+<input type="date">
+
+<textarea placeholder="Descripción del contenido"></textarea>
+
+<button type="submit">
+Guardar Campaña
+</button>
+
+</form>
+
+</div>
+
+</section>
+<!-- HISTORIAL DE CAMPAÑAS -->
+
+<section class="section fondo-claro">
+
+<div class="contenedor">
+
+<h2>Historial de Campañas</h2>
+
+<table class="tabla-historial">
+
+<thead>
+<tr>
+<th>Campaña</th>
+<th>Red Social</th>
+<th>Fecha</th>
+<th>Descripción</th>
+<th>Acción</th>
+</tr>
+</thead>
+
+<tbody id="historialCampanas">
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- CALENDARIO -->
+
+<section class="section fondo-claro">
+
+<div class="contenedor">
+
+<h2>Calendario de Contenidos</h2>
+
+<div class="calendario-controles">
+  <button onclick="mesAnterior()">Anterior</button>
+  <h3 id="mesActual"></h3>
+  <button onclick="mesSiguiente()">Siguiente</button>
+</div>
+
+<div class="calendario-grid" id="calendarioGrid"></div>
+
+</div>
+
+</section>
+
+<!-- IA -->
+
+<section class="section">
+
+<div class="contenedor">
+
+<h2>Asistente de Inteligencia Artificial</h2>
+
+<p>
+
+Genera ideas para promociones, publicaciones,
+ofertas y campañas de marketing para PALMO.
+
+</p>
+
+<button id="btnIA">
+Generar Idea
+</button>
+
+<div id="resultadoIA">
+
+Aquí aparecerá la idea generada.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="section fondo-amarillo">
+
+<div class="contenedor">
+
+<h2>Dashboard KPI</h2>
+
+<div class="dashboard">
+
+<div class="kpi">
+<h3>Campañas Registradas</h3>
+<p id="campanasKPI">0</p>
+</div>
+
+<div class="kpi">
+<h3>Alcance Estimado</h3>
+<p id="alcanceKPI">0</p>
+</div>
+
+<div class="kpi">
+<h3>Interacciones</h3>
+<p id="interaccionesKPI">0</p>
+</div>
+
+<div class="kpi">
+<h3>ROI Estimado</h3>
+<p id="roiKPI">0%</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto" class="section">
+
+<div class="contenedor">
+
+<h2>Contáctanos</h2>
+
+<p>
+📍 Ayacucho - Perú
+</p>
+
+<p>
+📞 +51 999 999 999
+</p>
+
+<p>
+📧 contacto@palmo.pe
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 PALMO - Donde cada sol rinde más
+
+</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
